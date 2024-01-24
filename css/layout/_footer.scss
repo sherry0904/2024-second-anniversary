@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.footer {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: flex-start;
+    padding: 2em 2em;
+    pointer-events: none;
+    &__text {
+        p {
+            font-size: 1em;
+            color: $c-white;
+        }
+    }
+}

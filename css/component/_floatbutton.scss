@@ -1,0 +1,28 @@
+
+.floatbutton{
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 6em;
+    cursor: pointer;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    &__finger {
+        position: absolute;
+        bottom: 100%;
+        left: 40%;
+        transform: translateX(-50%);
+        width: 55%;
+    }
+}
+
+@media (max-width: 992px) {
+    .floatbutton{
+        top: 56%;
+        width: 9em;
+    }
+}

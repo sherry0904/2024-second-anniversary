@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: $font-family-base;
+}
+
+
+p {
+    font-family: $font-family-base;
+    margin: 0;
+    line-height: 1.5;
+    transform: scaleY(1.1);
+    transform-origin: top;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    &__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center center;
+    }
+}
+
+
+.bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    // width: em(2260);
+    width: em(1920);
+    height: em(992);
+    transform: translate(-50%, -50%);
+    img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+
+.fbTip {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: $c-black;
+    p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1em;
+        line-height: 1.5;
+        color: $c-white;
+    }
+}
+
+.nicescroll-rails {
+    right: 0;
+    left: auto;
+}
+
+.arrowDown {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    bottom: 5em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.5em;
+    animation: arrowDown 2s both infinite;
+    opacity: 0.8;
+}
+
+.mb-show {
+    display: none;
+}
+
+.pc-show {
+    display: block;
+}
+
+@keyframes arrowDown {
+    0%, 100% {
+        transform: translate(-50%, 1em);
+    }
+    50% {
+        transform: translate(-50%, 0);
+    }
+}
+
+@media (min-width: 1921px) {
+    .bg {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 992px) {
+    .mb-show {
+        display: block;
+    }
+    .pc-show {
+        display: none;
+    }
+    .bg {
+        height: em(870);
+    }
+}

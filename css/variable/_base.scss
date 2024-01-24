@@ -1,0 +1,23 @@
+@charset "UTF-8";
+// 共用變數與函數
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Open+Sans&display=swap');
+
+/* Font */
+$font-family-base: 'Noto Sans TC', 'Noto Serif TC', 'Open Sans', sans-serif;
+$font-serif: 'Noto Serif TC', 'Noto Sans TC', 'Open Sans', sans-serif;
+$font-eng:  'Open Sans', 'Noto Sans TC', 'Noto Serif TC', sans-serif;
+$font-cubic: 'Cubic', 'Noto Sans TC', 'Noto Serif TC', 'Open Sans', sans-serif;
+
+/* color */
+$c-black: #000;
+$c-white: #ffffff;
+$c-blue: #5db4e0;
+$c-red: #f48fc1;
+$c-purple: #9663fc;
+
+
+@font-face {
+    font-family: 'Cubic';
+    src: url(../font/Cubic_11_1.100_R.woff) format('woff2'),
+        url(../font/Cubic_11_1.100_R.woff2) format('woff');
+}

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 2em;
+    pointer-events: none;
+    .logo {
+        pointer-events: auto;
+        &-dell {
+            width: 19em;
+        }
+        &-title {
+            width: 27em;
+            display: none;
+        }
+    }
+}

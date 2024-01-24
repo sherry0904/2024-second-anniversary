@@ -1,0 +1,189 @@
+@charset "UTF-8";
+.loading {
+    // opacity: 0;
+    // visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: em(2260);
+    height: em(992);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    background: $c-black;
+
+    &__box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+
+    &__ani {
+        position: relative;
+        width: 30.25em;
+        height: 30.25em;
+        border-radius: 100%;
+        border: 2px solid transparent;
+        border-color: transparent rgba(white, 0.3) transparent rgba(white, 0.3);
+        animation: rotate-loading 1.5s linear 0s infinite normal;
+        transform-origin: 50% 50%;
+
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+    &__text {
+        animation: fadeIn 1s 2s both;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        text-transform: uppercase;
+        width: 21em;
+        p {
+            color: rgba($c-blue, 0.7);
+            font-size: 2.875em;
+            font-weight: 500;
+            letter-spacing: 10px;
+            line-height: 1;
+            margin: 0;
+        }
+    }
+    &__bar {
+        width: 15px;
+        height: 6px;
+        border-radius: 2px;
+        background-color: #ffc947;
+        position: absolute;
+        top: 56%;
+        left: 42%;
+        transform: translate(-50%, -50%);
+        animation: loadingJ 2s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+    }
+    .button__deco__obj {
+        position: absolute;
+        left: 50%;
+        top: 54%;
+        transform: translate(-50%, -50%);
+        width: 13em;
+        height: 0.35em;
+        animation: fadeIn 1s 2s both;
+        display: flex;
+        justify-content: space-between;
+        &__item {
+            width: 3em;
+            height: 100%;
+            transform: skewX(40deg);
+            background-color: #0076ce;
+            &-1 {
+                animation: loadingDotAni 0.5s both infinite;
+                background-color: #df49e2;
+            }
+            &-2 {
+                animation: loadingDotAni 0.5s 0.1s both infinite;
+                background-color: #a15de1;
+            }
+            &-3 {
+                animation: loadingDotAni 0.5s 0.2s both infinite;
+                background-color: #5462dd;
+            }
+            &-4 {
+                animation: loadingDotAni 0.5s 0.3s both infinite;
+                background-color: #0861da;
+            }
+        }
+    }
+
+    @keyframes loadingDotAni {
+        0%, 100% {
+            opacity: 0.7;
+            filter: hue-rotate(0deg);
+        }
+        50% {
+            opacity: 1;
+            filter: hue-rotate(18deg);
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes rotate-loading {
+        0% {
+            transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+        }
+    }
+}
+
+.section__loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes loadingJ {
+
+    0%,
+    100% {
+        left: 42%;
+    }
+
+    50% {
+        left: 57%;
+        background-color: #04573d;
+        width: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .loading {
+        &__text {
+            width: 21em;
+        }
+        &__bar {
+            height: 3px;
+        }
+    }
+}

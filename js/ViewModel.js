@@ -11,17 +11,7 @@ function ViewModel() {
   // alert($(window).width())
   // alert($(window).height())
 
-  let data = {
-    name: "",
-    phone: "",
-    company_email: "",
-    company_name: "",
-    company_department: "",
-    company_title: "",
-    q1: "0",
-    q2: "0",
-    q3: "0"
-};
+  let data = [];
 
   let endDate = "2024/12/31 23:59"; // 活動結束日期
   let winnerDate = "2024/12/31 23:59"; // 得獎公告日期
@@ -197,78 +187,15 @@ function ViewModel() {
     }, 0);
   }
 
-  // 重設 alert
-  function resetAlert() {
-    if(alertTimeInline !== null) {
-      alertTimeInline.kill();
-      alertTimeInline = null
-    }
-    if(alertTimeOutline !== null) {
-      alertTimeOutline.kill();
-      alertTimeOutline = null
-    }
-    $(".alert__content p").html("");
-    gsap.set(".alert", { autoAlpha: 0 })
-    gsap.set(".alert__button", { autoAlpha: 0})
-    gsap.set(".alert__body", { autoAlpha: 0, width: 0, height: 0 })
-  }
-
-  // 使用 alert
-  function alertIn(msg, el=".alertBase") {
-    $(el + " .alert__content p").html(msg);
-    $(el + " .alert__body").css("height", "auto");
-    $(el + " .alert__body").css("width", "35em");
-    let bodyH = $(el + " .alert__body").outerHeight();
-    gsap.set(el + " .alert__body", { height: bodyH })
-    gsap.set(el + " .alert__body", { width: 0 })
-    // console.log("bodyH: "+bodyH)
-    gsap.set(el + " .alert__content p", { autoAlpha: 0 })
-    alertTimeInline = gsap.timeline();
-    alertTimeInline.to(el, { duration: 0, autoAlpha: 1 });
-    alertTimeInline.to(el + " .alert__body", { duration: 0.7, autoAlpha: 1, width: "35em", ease: "back.inOut(1.2)", });
-    alertTimeInline.to(el + " .alert__content p, .alert__button", { duration: 0.3, autoAlpha: 1, delay: 0.1 })
-    // alertTimeInline.to("", { duration: 0.3, autoAlpha: 1, y: 0 }, "-=0.4");
-  }
-
-  // alert 離場
-  function alertOut(el=".alertBase") {
-    alertTimeOutline = gsap.timeline();
-    alertTimeOutline.to(el + " .alert__button", { duration: 0.2, autoAlpha: 0 });
-    alertTimeOutline.to(el + " .alert__content p", { duration: 0.2, autoAlpha: 0 , onComplete: function(){
-      $(el + " .alert__content p").html("");
-    }}, 0);
-    if(!isMobile) {
-      alertTimeOutline.to(el + " .alert__body", { duration: 0.5, autoAlpha: 0, width: 0, ease: "back.in(1.4)" });
-    }else {
-      alertTimeOutline.to(el + " .alert__body", { duration: 0.5, autoAlpha: 0, width: 0, ease: "back.in(0.3)" });
-    }
-    alertTimeOutline.to(el, { duration: 0, autoAlpha: 0,
-    onComplete: function(){
-      resetAlert();
-    } });
-  }
-
   // 送註冊表單
-  function register(theFormData) {
-    // 測試用
-    // return new Promise(res => {
-    //   data = theFormData;
-    //   setRegisterCookies(data);
-    //   res("ok")
-    // })
-
-    // 正式用
-    data = {
-      ...data,
-      ...theFormData
-    }
-    return POST('/fy2q4q/result', {
-      ...data,
-      ...theFormData,
-    }).catch((error)=> {
-      console.log('_register:' + error);
-      throw '表單儲存失敗';
-    });
+  function getData() {
+    return new Promise(resolve => {
+      $.ajax("./js/data.json").then(res => {
+        data = res
+        resolve(data);
+        return data;
+      });
+    })
   }
 
   function setRegisterCookies(data) {
@@ -380,10 +307,7 @@ function ViewModel() {
     onAlert,  // 監聽alert
     onSectionEnter, // 監聽 section 進入
     goToSection, // 指定到特定section
-    resetAlert, 
-    alertIn,
-    alertOut,
-    register,
+    getData,
     resetSection,
     survey,
     getCurrentSection, // 取得現在停留頁面,

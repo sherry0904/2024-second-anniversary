@@ -1,11 +1,91 @@
 @charset "UTF-8";
 
 .challenge {
+    .bg {
+        filter: blur(0.5em);
+    }
+    .section__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
     &__ques {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-bottom: 5em;
+        p {
+            @include text_glow($c-blue);
+            font-size: 2.5em;
+            line-height: 1.7;
+        }
+    }
+    &__answers {
+        &__item {
+            width: 100%;
+            height: auto;
+            padding: 1em 2em;
+            box-shadow: 0 0 1em rgba($c-white, 1), 0 0 1.5em rgba($c-white, 1);
+            border: 1px solid rgba($c-white, 0.9);
+            border-radius: 1em;
+            background-color: rgba($c-white, 0.2);
+            margin-bottom: 2em;
+            transition: 0.3s;
+            p {
+                @include text_glow($c-blue);
+                font-size: 2em;
+                line-height: 1.7;
+            }
+            &.wrong {
+                box-shadow: 0 0 0.5em rgba($c-black, 0.5), 0 0 1em rgba($c-black, 0.5);
+                background-color: rgba($c-black, 0.3);
+                p {
+                    text-shadow: none;
+                    color: rgba($c-white, 0.5);
+                }
+            }
+            &.right {
+                box-shadow: 0 0 1em rgba($c-green, 1), 0 0 1.5em rgba($c-green, 1);
+                border: 0.5em solid rgba($c-green, 0.9);
+                background-color: rgba($c-white, 0.8);
+                transform: scale(1.2);
+                p {
+                    @include text_glow($c-white);
+                    color: $c-green;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    &__buttons {
+        display: flex;
+        position: absolute;
+        right: 5em;
+        bottom: 5em;
+        &__item {
+            cursor: pointer;
+            width: 10em;
+            height: 10em;
+            margin: 1em;
+            background-color: rgba($c-black, 0.7);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0.5em solid rgba($c-green, 0.8);
+            p {
+                display: inline-block;
+                margin-bottom: 0;
+                font-size: 2.3em;
+                color: rgba($c-white, 0.8);
+                line-height: 1;
+            }
+            &-ninesquare {
+                border: 0.5em solid rgba(rgb(255, 217, 0), 0.8);
+            }
+        }
     }
 }
 

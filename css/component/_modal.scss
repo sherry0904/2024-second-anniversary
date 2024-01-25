@@ -88,6 +88,7 @@
         }
     }
     &__detail {
+        margin-bottom: 2em;
         &__item {
             margin-bottom: 2em;
         }
@@ -123,6 +124,21 @@
             p {
                 margin-bottom: 0;
             }
+        }
+    }
+    &__button {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-block;
+        padding: 1em 4em;
+        border: 1px solid #fff;
+        border-radius: 5em;
+        p {
+            display: inline-block;
+            text-align: center;
+            color: #fff;
+            font-size: 2em;
         }
     }
 }

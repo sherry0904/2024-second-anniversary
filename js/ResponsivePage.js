@@ -55,7 +55,7 @@ function ResponsivePage() {
 
     if (isMobile && !isHorizontal) {
       _canvaHeight = 870;
-      console.log("isMobile && !isHorizontal")
+      // console.log("isMobile && !isHorizontal")
     }
 
     // console.log("_canvaHeight: "+_canvaHeight)
@@ -128,8 +128,8 @@ function ResponsivePage() {
       $('.wrapper').css('height', $(window).innerHeight());
     }
 
-    console.log("_windowW / _windowH: "+_windowW / _windowH);
-    console.log("isHorizontal: "+isHorizontal);
+    // console.log("_windowW / _windowH: "+_windowW / _windowH);
+    // console.log("isHorizontal: "+isHorizontal);
 
     events.onHorizontal(isHorizontal);
   }

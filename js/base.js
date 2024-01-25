@@ -54,7 +54,7 @@ base = function () {
 			// alert("width:" + $(window).width())
 			// alert("height:" + $(window).height())
 
-			viewModel.goToSection(".challenge", "fade");
+			viewModel.goToSection(".ninesquare", "fade");
 			$(".loading").fadeOut(1000);
 			setTimeout(()=>{
 				horizontalHandler();
@@ -81,62 +81,53 @@ base = function () {
 				setTimeout(()=>{
 					landingPage.openAni();
 				}, 100);
-				gtag_pageView("landing");
 			}
-			if(_section === ".creators-choose") {
+			if(_section === ".ninesquare") {
 				setTimeout(()=>{
-					creatorsPage.openAni_choose();
+					gamePage.openAni_ninesquare();
 				}, 0);
-				gtag_pageView("creators-choose");
 			}
 			
-			if (_section === ".creators-huber") {
+			if (_section === ".challenge") {
 				setTimeout(() => {
-					creatorsPage.openAni_huber();
+					gamePage.openAni_challenge();
 				}, 100);
-				gtag_pageView("creators-huber");
 			}
 
 			if (_section === ".creators-leeon") {
 				setTimeout(() => {
 					creatorsPage.openAni_leeon();
 				}, 100);
-				gtag_pageView("creators-leeon");
 			}
 
 			if (_section === ".creators-video-huber") {
 				setTimeout(() => {
 					creatorsPage.openAni_video_huber();
 				}, 100);
-				gtag_pageView("creators-video-huber");
 			}
 
 			if (_section === ".creators-video-leeon") {
 				setTimeout(() => {
 					creatorsPage.openAni_video_leeon();
 				}, 100);
-				gtag_pageView("creators-video-leeon");
 			}
 
 			if (_section === ".product-choose") {
 				setTimeout(() => {
 					productPage.openAni_choose();
 				}, 100);
-				gtag_pageView("product-choose");
 			}
 			
 			if (_section === ".product-precision") {
 				setTimeout(() => {
 					productPage.openAni_precision();
 				}, 100);
-				gtag_pageView("product-precision");
 			}
 
 			if (_section === ".product-inspiron") {
 				setTimeout(() => {
 					productPage.openAni_inspiron();
 				}, 100);
-				gtag_pageView("product-inspiron");
 			}
 			
 			if (_section === ".strongpoint") {
@@ -144,10 +135,14 @@ base = function () {
 				setTimeout(() => {
 					strongpointPage.openAni();
 				}, 100);
-				gtag_pageView("strongpoint");
 			}
 
 		})
+
+		$(".goToNinesquare").on("click", function() {
+			viewModel.goToSection(".ninesquare", "fade");
+			$(".modal-explan").modal("hide");
+		});
 
 	}
 

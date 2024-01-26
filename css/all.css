@@ -13103,6 +13103,12 @@ textarea.form-control-lg {
 .modal__box ::-webkit-scrollbar-track {
   box-shadow: transparent;
 }
+.modal__body {
+  margin-bottom: 2em;
+}
+.modal__body-5 .modal__detail__img {
+  width: 100%;
+}
 .modal__title {
   margin-bottom: 2em;
 }
@@ -13113,43 +13119,13 @@ textarea.form-control-lg {
   margin-bottom: 0;
   font-family: "Cubic", "Noto Sans TC", "Noto Serif TC", "Open Sans", sans-serif;
 }
-.modal__detail {
-  margin-bottom: 2em;
+.modal__detail__img {
+  width: 40em;
+  margin: 0 auto;
 }
-.modal__detail__item {
-  margin-bottom: 2em;
-}
-.modal__detail h3 {
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 1.7em;
-  letter-spacing: 0.1em;
-}
-.modal__detail p {
-  font-size: 1.5em;
-  line-height: 1.7em;
-}
-.modal__detail p.bold {
-  font-weight: 600;
-}
-.modal__detail ul, .modal__detail ol {
-  color: #ffffff;
-}
-.modal__detail li {
-  margin-bottom: 1em;
-}
-.modal__detail li:last-child {
-  margin-bottom: 0;
-}
-.modal__detail li a {
-  display: inline-block;
-  color: #ffffff;
-}
-.modal__detail li a:hover {
-  color: #ffffff;
-}
-.modal__detail li p {
-  margin-bottom: 0;
+.modal__detail__img img {
+  width: 100%;
+  height: auto;
 }
 .modal__button {
   position: relative;
@@ -13692,7 +13668,7 @@ html, body {
 }
 
 .challenge .bg {
-  filter: blur(0.5em);
+  filter: blur(0.5em) brightness(0.3);
 }
 .challenge .section__container {
   display: flex;
@@ -13708,29 +13684,49 @@ html, body {
   margin-bottom: 5em;
 }
 .challenge__ques p {
-  font-family: "Noto Sans TC", "Noto Serif TC", "Open Sans", sans-serif;
   color: #ffffff;
-  text-shadow: 0 0 0.1em rgba(93, 180, 224, 0.85), 0 0 0.2em rgba(93, 180, 224, 0.85);
   font-size: 2.5em;
   line-height: 1.7;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+.challenge__ques p .small {
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.challenge__ques img {
+  display: block;
+  width: 9em;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+.challenge__ques-6 {
+  margin-bottom: 3em;
+}
+.challenge__ques-6 p {
+  font-size: 2.3em;
+}
+.challenge__answers {
+  display: flex;
+  flex-wrap: wrap;
 }
 .challenge__answers__item {
   width: 100%;
   height: auto;
-  padding: 1em 2em;
-  box-shadow: 0 0 1em white, 0 0 1.5em white;
+  padding: 1em 3em;
+  box-shadow: 0 0 0.25em white, 0 0 0.5em white;
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 1em;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   margin-bottom: 2em;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 .challenge__answers__item p {
-  font-family: "Noto Sans TC", "Noto Serif TC", "Open Sans", sans-serif;
   color: #ffffff;
-  text-shadow: 0 0 0.1em rgba(93, 180, 224, 0.85), 0 0 0.2em rgba(93, 180, 224, 0.85);
   font-size: 2em;
   line-height: 1.7;
+  letter-spacing: 0.1em;
 }
 .challenge__answers__item.wrong {
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5), 0 0 1em rgba(0, 0, 0, 0.5);
@@ -13753,11 +13749,26 @@ html, body {
   color: rgb(0, 162, 100);
   font-weight: 600;
 }
+.challenge__answers-col1 {
+  width: auto;
+}
+.challenge__answers-col1 .challenge__answers__item {
+  width: 100%;
+}
+.challenge__answers-col2 {
+  width: 80em;
+}
+.challenge__answers-col2 .challenge__answers__item {
+  width: 46%;
+  margin-right: 2%;
+}
 .challenge__buttons {
   display: flex;
   position: absolute;
   right: 5em;
   bottom: 5em;
+  opacity: 0;
+  visibility: hidden;
 }
 .challenge__buttons__item {
   cursor: pointer;
@@ -13780,6 +13791,21 @@ html, body {
 }
 .challenge__buttons__item-ninesquare {
   border: 0.5em solid rgba(255, 217, 0, 0.8);
+}
+.challenge__annouce {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.challenge__annouce p {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 15em;
+  font-family: "Noto Sans TC", "Noto Serif TC", "Open Sans", sans-serif;
+  color: #ffffff;
+  text-shadow: 0 0 0.1em rgba(244, 143, 193, 0.85), 0 0 0.2em rgba(244, 143, 193, 0.85);
 }
 
 .strongpoint__discount {

@@ -139,7 +139,7 @@ base = function () {
 
 		})
 
-		$(".goToNinesquare").on("click", function() {
+		$(".game__resizeArea").on("click", ".goToNinesquare", function() {
 			viewModel.goToSection(".ninesquare", "fade");
 			$(".modal-explan").modal("hide");
 		});

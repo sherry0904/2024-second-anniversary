@@ -21,8 +21,8 @@
             "A. 法國", "B. 荷蘭", "C. 德國", "D. 英國"
         ],
         "answerscol": 2,
-        "correct": "法國",
-        "detail": "<img src=''>"
+        "correct": "德國",
+        "detail": "<div class='modal__detail__img'><img src='./images/section/game/detail-1.jpg'></div>"
     },
     {
         "id": 2,
@@ -33,43 +33,7 @@
         ],
         "answerscol": 2,
         "correct": "太空發展",
-        "detail": "<img src=''>"
-    },
-    {
-        "id": 3,
-        "tag": "成為<br>海賊王",
-        "ques": "魯夫是什麼星座的呢？",
-        "answers": [
-            "A. 射手座", "B. 牡羊座", "C. 摩羯座", "D. 金牛座"
-        ],
-        "answerscol": 2,
-        "correct": "金牛座",
-        "detail": "<img src=''>"
-    },
-    {
-        "id": 8,
-        "tag": "工具<br>大百科",
-        "ques": "請問這個工具叫做什麼？<br><img src='./images/section/game/ques-8.jpg'>",
-        "answers": [
-            "A. 手鑽", 
-            "B. 鑿子", 
-            "C. 螺絲起子", 
-            "D. 螺栓"
-        ],
-        "answerscol": 2,
-        "correct": "手鑽",
-        "detail": "<img src=''>"
-    },
-    {
-        "id": 4,
-        "tag": "沙威瑪<br>饕客",
-        "ques": "沙威瑪是來自土耳其，請問在土耳其「沙威瑪」是什麼意思？",
-        "answers": [
-            "A. 烤肉", "B. 轉動", "C. 交疊", "D. 碎肉"
-        ],
-        "answerscol": 2,
-        "correct": "轉動",
-        "detail": "<img src=''>"
+        "detail": "<div class='modal__detail__img'><img src='./images/section/game/detail-2.jpg'></div>"
     },
     {
         "id": 6,
@@ -86,9 +50,45 @@
         "detail": "<div class='modal__detail__img'><img src='./images/section/game/detail-6.jpg'></div>"
     },
     {
+        "id": 8,
+        "tag": "工具<br>大百科",
+        "ques": "請問這個工具叫做什麼？<br><img src='./images/section/game/ques-8.jpg'>",
+        "answers": [
+            "A. 手鑽", 
+            "B. 鑿子", 
+            "C. 螺絲起子", 
+            "D. 螺栓"
+        ],
+        "answerscol": 2,
+        "correct": "手鑽",
+        "detail": "<p>手鑽是產生桿快速旋轉運動的最簡單和最基本的方法。雙手垂直握住棒，並以摩擦的方式來回移動。桿通常長 1 至 2 英尺，直徑 0.5 英寸。 手電鑽在許多原始社會已被用作消防演習來生火。它通常被作為一種生存技能而學習，至今仍然有用。手鑽還可以用作在木材、石頭和骨頭等硬質材料上鑽孔的工具。 兩種用途都需要在旋轉桿時施加向下的手壓力。結果，手在桿下方流動，不得不定期再次將其提升到頂部。可以通過在軸的頂部切一個凹口，將繩子系在那裡，然後將拇指插入繩圈來避免這種干擾。然而，熟練的操作員可以在不幾乎垂直移動雙手的情況下保持壓力。或者，您可以以相當於懸浮的動作將手“漂浮”回鑽頭頂部。</p>"
+    },
+    {
+        "id": 4,
+        "tag": "沙威瑪<br>饕客",
+        "ques": "沙威瑪是來自土耳其，請問在土耳其「沙威瑪」是什麼意思？",
+        "answers": [
+            "A. 烤肉", "B. 轉動", "C. 交疊", "D. 碎肉"
+        ],
+        "answerscol": 2,
+        "correct": "轉動",
+        "detail": "<div class='modal__detail__img'><img src='./images/section/game/detail-4.jpg'></div>"
+    },
+    {
+        "id": 3,
+        "tag": "成為<br>海賊王",
+        "ques": "魯夫是什麼星座的呢？",
+        "answers": [
+            "A. 射手座", "B. 牡羊座", "C. 摩羯座", "D. 金牛座"
+        ],
+        "answerscol": 2,
+        "correct": "金牛座",
+        "detail": "<div class='modal__detail__img'><img src='./images/section/game/detail-3.jpg'></div>"
+    },
+    {
         "id": 7,
         "tag": "資深<br>租屋族",
-        "ques": "請問若租屋處要提前解約需於多久前提前告知？",
+        "ques": "請問若租屋處要提前解約最晚需於多久前提前告知？",
         "answers": [
             "A. 一個禮拜前", 
             "B. 一個月以前", 
@@ -97,7 +97,7 @@
         ],
         "answerscol": 2,
         "correct": "一個月以前",
-        "detail": "<img src=''>"
+        "detail": "<div class='modal__detail__img'><img src='./images/section/game/detail-7.jpg'></div>"
     },
     {
         "id": 9,
@@ -111,6 +111,6 @@
         ],
         "answerscol": 1,
         "correct": "洗內衣 -> 洗頭 -> 洗身體 -> 洗臉",
-        "detail": "<img src=''>"
+        "detail": "<p>答案就在你身邊</p>"
     }
 ]

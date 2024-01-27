@@ -13106,8 +13106,16 @@ textarea.form-control-lg {
 .modal__body {
   margin-bottom: 2em;
 }
-.modal__body-5 .modal__detail__img {
-  width: 100%;
+.modal__body-6 .modal__detail__img {
+  width: 40em;
+}
+.modal__body-8 img {
+  margin-top: 1em;
+  width: 10em;
+}
+.modal__body-9 .modal__detail p {
+  font-size: 5em;
+  text-align: center;
 }
 .modal__title {
   margin-bottom: 2em;
@@ -13120,7 +13128,7 @@ textarea.form-control-lg {
   font-family: "Cubic", "Noto Sans TC", "Noto Serif TC", "Open Sans", sans-serif;
 }
 .modal__detail__img {
-  width: 40em;
+  width: 100%;
   margin: 0 auto;
 }
 .modal__detail__img img {
@@ -13710,6 +13718,7 @@ html, body {
 .challenge__answers {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .challenge__answers__item {
   width: 100%;
@@ -13751,16 +13760,21 @@ html, body {
 }
 .challenge__answers-col1 {
   width: auto;
+  padding: 0 6em;
+  flex-direction: column;
 }
 .challenge__answers-col1 .challenge__answers__item {
-  width: 100%;
+  width: auto;
+  min-width: 51em;
+  max-width: 90em;
 }
 .challenge__answers-col2 {
-  width: 80em;
+  width: 73em;
 }
 .challenge__answers-col2 .challenge__answers__item {
   width: 46%;
-  margin-right: 2%;
+  margin-right: 4%;
+  margin-bottom: 3em;
 }
 .challenge__buttons {
   display: flex;
@@ -13798,6 +13812,7 @@ html, body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 .challenge__annouce p {
   text-align: center;

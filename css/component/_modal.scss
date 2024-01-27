@@ -79,9 +79,23 @@
     }
     &__body {
         margin-bottom: 2em;
-        &-5 {
+        &-6 {
             .modal__detail__img {
-                width: 100%;
+                width: 40em;
+            }
+        }
+        &-8 {
+            img {
+                margin-top: 1em;
+                width: 10em;
+            }
+        }
+        &-9 {
+            .modal__detail {
+                p {
+                    font-size: 5em;
+                    text-align: center;
+                }
             }
         }
     }
@@ -97,7 +111,7 @@
     }
     &__detail {
         &__img {
-            width: 40em;
+            width: 100%;
             margin: 0 auto;
             img {
                 width: 100%;

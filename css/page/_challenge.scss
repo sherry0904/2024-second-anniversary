@@ -45,6 +45,7 @@
     &__answers {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         &__item {
             width: 100%;
             height: auto;
@@ -83,15 +84,20 @@
         }
         &-col1 {
             width: auto;
+            padding: 0 6em;
+            flex-direction: column;
             .challenge__answers__item {
-                width: 100%;
+                width: auto;
+                min-width: 51em;
+                max-width: 90em;
             }
         }
         &-col2 {
-            width: 80em;
+            width: 73em;
             .challenge__answers__item {
                 width: 46%;
-                margin-right: 2%;
+                margin-right: 4%;
+                margin-bottom: 3em;
             }
         }
     }
@@ -131,6 +137,7 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        pointer-events: none;
         p {
             text-align: center;
             margin-bottom: 0;

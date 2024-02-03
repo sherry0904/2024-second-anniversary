@@ -56,6 +56,8 @@
             background-color: rgba($c-white, 0.1);
             margin-bottom: 2em;
             transition: 0.5s;
+            -ms-touch-action: none; /* IE10 */
+            touch-action: none;  
             p {
                 color: $c-white;
                 font-size: 2em;

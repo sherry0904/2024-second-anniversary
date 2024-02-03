@@ -140,6 +140,7 @@ base = function () {
 		})
 
 		$(".game__resizeArea").on("click", ".goToNinesquare", function() {
+			gamePage.resetSection_ninesquare()
 			viewModel.goToSection(".ninesquare", "fade");
 			$(".modal-explan").modal("hide");
 		});

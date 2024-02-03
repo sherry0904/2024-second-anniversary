@@ -255,6 +255,7 @@ gamePage = function () {
 	return {
 		openAni_ninesquare,
 		openAni_challenge,
+		resetSection_ninesquare
 	};
 };
 

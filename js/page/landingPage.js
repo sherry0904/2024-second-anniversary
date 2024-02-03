@@ -5,8 +5,6 @@ landingPage = function () {
 
 	let startY; // 記錄滑動開始時的 Y 座標
 	let isScrolling = false; // 判斷是否正在滑動
-	let scrollTimer;
-	let scrollDirection = "down";
 
 	//private methods
 	function init() {
@@ -43,36 +41,6 @@ landingPage = function () {
 				}
 			}
 		});
-
-		// 監聽滾軸事件
-		// $(".landing")[0].addEventListener('wheel', (event) => {
-		// 	// 判斷滾輪方向
-		// 	if (event.deltaY > 0) {
-		// 		console.log('往下滑動');
-		// 		scrollDirection = "down";
-		// 	} else if (event.deltaY < 0) {
-		// 		console.log('往上滑動');
-		// 		scrollDirection = "up";
-		// 	}
-		
-		// 	// 設置 scrolling 為 true
-		// 	scrolling = true;
-		
-		// 	// 清除之前的計時器
-		// 	clearTimeout(scrollTimer);
-		
-		// 	// 設定計時器，在滾輪停止後 500 毫秒執行操作
-		// 	scrollTimer = setTimeout(() => {
-		// 		console.log('滾輪停止');
-		// 		scrolling = false;
-
-		// 		// 在這裡執行你的特定操作
-		// 		if(scrollDirection = "down") {
-		// 			goToCreatorsChoose();
-		// 		}
-				
-		// 	}, 200);
-		// });
 
 		$(".landing__arrow").on("click", function(){
 			goToCreatorsChoose();

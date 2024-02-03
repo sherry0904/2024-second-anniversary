@@ -13143,6 +13143,8 @@ textarea.form-control-lg {
   padding: 1em 4em;
   border: 1px solid #fff;
   border-radius: 5em;
+  -ms-touch-action: none; /* IE10 */
+  touch-action: none;
 }
 .modal__button p {
   display: inline-block;
@@ -13546,6 +13548,8 @@ html, body {
   align-items: center;
   mix-blend-mode: lighten;
   cursor: pointer;
+  -ms-touch-action: none; /* IE10 */
+  touch-action: none;
 }
 .landing__arrow img {
   position: relative;
@@ -13609,6 +13613,8 @@ html, body {
   background-color: rgba(135, 135, 135, 0.3);
   border-radius: 0.5em;
   border: 0.3em solid #70ccd9;
+  -ms-touch-action: none; /* IE10 */
+  touch-action: none;
 }
 .ninesquare__item::before {
   content: "";
@@ -13724,6 +13730,8 @@ html, body {
   background-color: rgba(255, 255, 255, 0.1);
   margin-bottom: 2em;
   transition: 0.5s;
+  -ms-touch-action: none; /* IE10 */
+  touch-action: none;
 }
 .challenge__answers__item p {
   color: #ffffff;

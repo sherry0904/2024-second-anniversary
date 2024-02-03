@@ -127,6 +127,8 @@
         padding: 1em 4em;
         border: 1px solid #fff;
         border-radius: 5em;
+        -ms-touch-action: none; /* IE10 */
+        touch-action: none;  
         p {
             display: inline-block;
             text-align: center;

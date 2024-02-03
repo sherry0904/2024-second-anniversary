@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
 .ninesquare {
+    &>.bg {
+        left: 35%;
+        width: 163em;
+        filter: brightness(0.3) blur(0.2em);
+    }
     .section__container {
         display: flex;
         justify-content: center;

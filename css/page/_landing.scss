@@ -3,6 +3,7 @@
 .landing {
     &>.bg {
         top: 50%;
+        filter: brightness(0.3) blur(0.2em);
     }
     &__title {
         // opacity: 0;
@@ -22,12 +23,6 @@
             line-height: 1;
             @include cubic_glow($c-blue);
         }
-        p {
-            margin-bottom: 0;
-            font-size: 2.25em;
-            line-height: 1;
-            @include cubic_glow($c-blue);
-        }
     }
     &__intro {
         // display: none;
@@ -37,11 +32,12 @@
         transform: translate(-50%, -50%);
         width: 100%;
         p {
+            @include cubic_glow($c-blue);
             text-align: center;
             margin-bottom: 0;
-            font-size: 1.6em;
+            font-size: 2.5em;
             line-height: 1.5;
-            @include cubic_glow($c-blue);
+            letter-spacing: 0.2em;
         }
     }
     .section__container {
@@ -100,15 +96,9 @@
         &>.bg {
             top: 48%;
         }
-        &__intro {
-            p {
-                @include cubic_glow($c-red);
-                font-size: 2.15em;
-            }
-        }
         &__arrow {
             left: 50.5%;
-            top: 88%;
+            top: 78%;
         }
     }
     .wrapper--horizontal {

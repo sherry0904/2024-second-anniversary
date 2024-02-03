@@ -13488,6 +13488,7 @@ html, body {
 
 .landing > .bg {
   top: 50%;
+  filter: brightness(0.3) blur(0.2em);
 }
 .landing__title {
   position: absolute;
@@ -13508,14 +13509,6 @@ html, body {
   color: #ffffff;
   text-shadow: 0 0 0.1em rgba(93, 180, 224, 0.85), 0 0 0.2em rgba(93, 180, 224, 0.85);
 }
-.landing__title p {
-  margin-bottom: 0;
-  font-size: 2.25em;
-  line-height: 1;
-  font-family: "Cubic", "Noto Sans TC", "Noto Serif TC", "Open Sans", sans-serif;
-  color: #ffffff;
-  text-shadow: 0 0 0.1em rgba(93, 180, 224, 0.85), 0 0 0.2em rgba(93, 180, 224, 0.85);
-}
 .landing__intro {
   position: absolute;
   top: 50.8%;
@@ -13524,13 +13517,14 @@ html, body {
   width: 100%;
 }
 .landing__intro p {
-  text-align: center;
-  margin-bottom: 0;
-  font-size: 1.6em;
-  line-height: 1.5;
   font-family: "Cubic", "Noto Sans TC", "Noto Serif TC", "Open Sans", sans-serif;
   color: #ffffff;
   text-shadow: 0 0 0.1em rgba(93, 180, 224, 0.85), 0 0 0.2em rgba(93, 180, 224, 0.85);
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 2.5em;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
 }
 .landing .section__container {
   position: absolute;
@@ -13582,16 +13576,15 @@ html, body {
   .landing > .bg {
     top: 48%;
   }
-  .landing__intro p {
-    font-family: "Cubic", "Noto Sans TC", "Noto Serif TC", "Open Sans", sans-serif;
-    color: #ffffff;
-    text-shadow: 0 0 0.1em rgba(244, 143, 193, 0.85), 0 0 0.2em rgba(244, 143, 193, 0.85);
-    font-size: 2.15em;
-  }
   .landing__arrow {
     left: 50.5%;
-    top: 88%;
+    top: 78%;
   }
+}
+.ninesquare > .bg {
+  left: 35%;
+  width: 163em;
+  filter: brightness(0.3) blur(0.2em);
 }
 .ninesquare .section__container {
   display: flex;
@@ -13811,7 +13804,8 @@ html, body {
   z-index: 1;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: -11em;
+  margin-left: -30em;
   pointer-events: none;
 }
 .challenge__annouce p {

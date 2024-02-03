@@ -14,10 +14,6 @@ landingPage = function () {
 
 		resetOpenAni();
 
-		$(".button-hack").on("click", function(){
-			viewModel.goToSection(".hack");
-		});
-
 		// 監聽滑動開始事件
 		$(".landing").on('touchstart', (e) => {
 			startY = e.touches[0].clientY;
@@ -137,7 +133,7 @@ landingPage = function () {
 
 	function goToCreatorsChoose() {
 		resetSection();
-		viewModel.goToSection(".creators-choose", "fade");
+		viewModel.goToSection(".ninesquare", "fade");
 	}
 
 	

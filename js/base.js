@@ -54,7 +54,7 @@ base = function () {
 			// alert("width:" + $(window).width())
 			// alert("height:" + $(window).height())
 
-			viewModel.goToSection(".ninesquare", "fade");
+			viewModel.goToSection(".landing", "fade");
 			$(".loading").fadeOut(1000);
 			setTimeout(()=>{
 				horizontalHandler();

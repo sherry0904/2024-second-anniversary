@@ -201,6 +201,7 @@ gamePage = function () {
 		challengeAnnounceAnswer();
 		challengeAnnouceAni();
 		gsap.to(".challenge__buttons", { duration: 0, autoAlpha: 1});
+		$(".challenge__answers__item").css("pointer-events", "none");
 	}
 
 	function ninesquareUpdate(){

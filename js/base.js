@@ -1,6 +1,6 @@
 base = function () {
 	//private menbers
-	let imageUrls = ["./images/section/landing/bg.jpg", "./images/section/landing/title.png"];
+	let imageUrls = ["./images/section/landing/title.png","./images/common/bg.jpg",  "./images/common/bg-2.jpg", "./images/common/bg-3.jpg"];
 	let arrowLeftAniTl = null;
 	let arrowRightAniTl = null;
 

@@ -110,7 +110,7 @@ function ViewModel() {
   }
 
   // 前往特定頁面
-  function goToSection(el = ".open", type) {
+  function goToSection(el = ".landing", type) {
     return new Promise(resolve => {
       sectionEnterAni(el, type).then(()=>{
         resolve( el + " goToSection")
@@ -139,9 +139,9 @@ function ViewModel() {
 
     sectionTimeline = gsap.timeline();
     if(currentSection !== null) {
-      sectionTimeline.to(currentSection, { duration: 0.7, autoAlpha: 0 });
+      sectionTimeline.to(currentSection, { duration: 0, autoAlpha: 0 });
     }
-    sectionTimeline.to( nextSection, { duration: 0.7, autoAlpha: 1,
+    sectionTimeline.to( nextSection, { duration: 0, autoAlpha: 1,
       onComplete: function(){
         resetSection();
         callback();

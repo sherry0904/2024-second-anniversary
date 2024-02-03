@@ -4,7 +4,7 @@
     &>.bg {
         left: 35%;
         width: 163em;
-        filter: brightness(0.3) blur(0.2em);
+        filter: brightness(0.4) blur(0.1em);
     }
     .section__container {
         display: flex;
@@ -28,6 +28,7 @@
         margin: 1%;
         background-color: rgba(135, 135, 135, 0.3);
         border-radius: 0.5em;
+        border: 0.3em solid #70ccd9;
         &::before {
             content: "";
             display: block;
@@ -53,7 +54,7 @@
         justify-content: center;
         align-items: center;
         p {
-            color: rgba($c-white, 0.5);
+            color: rgba($c-white, 1);
             font-size: 2.5em;
             text-align: center;
         }

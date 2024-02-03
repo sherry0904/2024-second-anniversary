@@ -13488,7 +13488,7 @@ html, body {
 
 .landing > .bg {
   top: 50%;
-  filter: brightness(0.3) blur(0.2em);
+  filter: brightness(0.4) blur(0.1em);
 }
 .landing__title {
   position: absolute;
@@ -13584,7 +13584,7 @@ html, body {
 .ninesquare > .bg {
   left: 35%;
   width: 163em;
-  filter: brightness(0.3) blur(0.2em);
+  filter: brightness(0.4) blur(0.1em);
 }
 .ninesquare .section__container {
   display: flex;
@@ -13608,6 +13608,7 @@ html, body {
   margin: 1%;
   background-color: rgba(135, 135, 135, 0.3);
   border-radius: 0.5em;
+  border: 0.3em solid #70ccd9;
 }
 .ninesquare__item::before {
   content: "";
@@ -13632,7 +13633,7 @@ html, body {
   align-items: center;
 }
 .ninesquare__text p {
-  color: rgba(255, 255, 255, 0.5);
+  color: white;
   font-size: 2.5em;
   text-align: center;
 }
@@ -13669,7 +13670,7 @@ html, body {
 }
 
 .challenge .bg {
-  filter: blur(0.5em) brightness(0.3);
+  filter: blur(0.1em) brightness(0.4);
 }
 .challenge .section__container {
   display: flex;

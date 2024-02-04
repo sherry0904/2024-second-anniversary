@@ -238,8 +238,8 @@ gamePage = function () {
 			$(".challenge__annouce p").text(incorrectText);
 		}
 		challengeAnnouceAniTl = gsap.timeline({});
-		challengeAnnouceAniTl.to(".challenge__annouce", { duration: 1, autoAlpha: 1, scale: 1.5});
-		challengeAnnouceAniTl.to(".challenge__annouce", { duration: 0.4, autoAlpha: 0, delay: 0.5 });
+		challengeAnnouceAniTl.to(".challenge__annouce", { duration: 0.7, autoAlpha: 1, scale: 1.5, ease: "none"});
+		challengeAnnouceAniTl.to(".challenge__annouce", { duration: 0.3, autoAlpha: 0, delay: 0.5, ease: "none" });
 	}
 
 

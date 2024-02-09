@@ -2,6 +2,10 @@ base = function () {
 	//private menbers
 	let imageUrls = ["./images/section/landing/title.png","./images/common/bg.jpg",  "./images/common/bg-2.jpg", "./images/common/bg-3.jpg"];
 
+	let isPlay = false;
+	const playIconPath = "./images/common/play-button.png"
+	const pauseIconPath = "./images/common/pause-button.png"
+
 	//private methods
 	function init() {
 		console.log('base is loaded.');
@@ -92,6 +96,32 @@ base = function () {
 			viewModel.goToSection(".ninesquare", "fade");
 			$(".modal-explan").modal("hide");
 		});
+
+		$(".music").on("click", function() {
+			musicHandler();
+		});
+
+	}
+
+	function musicHandler() {
+		const audio = $("#bgm")[0];
+		audio.volume = 0.8;
+		if(isPlay) {
+			$(".music__icon img").attr("src", playIconPath);
+			audio.pause()
+			audio.removeEventListener("ended", function() {
+				audio.currentTime = 0;
+				audio.play()
+			});
+		}else {
+			$(".music__icon img").attr("src", pauseIconPath);
+			audio.play();
+			audio.addEventListener("ended", function() {
+				audio.currentTime = 0;
+				audio.play();
+			});
+		}
+		isPlay = !isPlay;
 
 	}
 

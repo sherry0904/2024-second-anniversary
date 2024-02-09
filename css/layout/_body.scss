@@ -107,6 +107,24 @@ img {
     opacity: 0.8;
 }
 
+.music {
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    z-index: 2;
+    audio {
+        display: none;
+    }
+    &__icon {
+        width: 5em;
+        opacity: 0.7;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
 .mb-show {
     display: none;
 }

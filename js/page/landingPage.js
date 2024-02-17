@@ -5,7 +5,6 @@ landingPage = function () {
 
 	let startY; // 記錄滑動開始時的 Y 座標
 	let isScrolling = false; // 判斷是否正在滑動
-	let isPlay = false;
 
 	//private methods
 	function init() {
@@ -47,9 +46,6 @@ landingPage = function () {
 			goToCreatorsChoose();
 		})
 
-		$(".music").on("click", function() {
-			musicHandler();
-		});
 
 		// 測試用
 		setTimeout(()=>{
@@ -61,25 +57,6 @@ landingPage = function () {
 	}
 
 	//constructor
-
-	function musicHandler() {
-		const audio = $("#bgm")[0];
-		if(isPlay) {
-			audio.pause()
-			audio.removeEventListener("ended", function() {
-				audio.currentTime = 0;
-				audio.play()
-			});
-		}else {
-			audio.play();
-			audio.addEventListener("ended", function() {
-				audio.currentTime = 0;
-				audio.play();
-			});
-		}
-		isPlay = !isPlay;
-
-	}
 
 	function resetOpenAni(){
 		gsap.set(".landing__arrow img", { opacity: 0.3});
